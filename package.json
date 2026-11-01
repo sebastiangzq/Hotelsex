@@ -1,0 +1,39 @@
+{
+  "name": "hotelsec-backend",
+  "version": "3.0.0",
+  "description": "HotelSec · Backend seguro (Node.js + Express + PostgreSQL)",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "setup:db": "node scripts/setup-db.js",
+    "gen:key": "node scripts/gen-key.js",
+    "test": "node --test tests/",
+    "respaldo": "node scripts/respaldo.js",
+    "smoke:1": "node scripts/smoke-test.js",
+    "smoke:2": "node scripts/smoke-test-2.js",
+    "build:front": "node frontend/build.mjs",
+    "check:front": "node scripts/check-front.js",
+    "smoke:3": "node scripts/smoke-test-3.js"
+  },
+  "dependencies": {
+    "argon2": "^0.41.1",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^8.0.0",
+    "otplib": "^12.0.1",
+    "pg": "^8.13.1",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^3.4.17"
+  }
+}
